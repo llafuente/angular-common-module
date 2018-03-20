@@ -1,0 +1,20 @@
+{
+  "name": "angular-common-module",
+  "description": "Small collection of classes that we use across all projects",
+  "version": "0.0.1",
+  "author": {
+    "name": "Luis Lafuente Morales"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "license": "MIT",
+  "main": "index.ts",
+  "peerDependencies": {
+    "@angular/core": ">=5.0.0",
+    "angular-bootstrap-ui": "*",
+    "ng2-toasty": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
