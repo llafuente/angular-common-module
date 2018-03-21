@@ -2,6 +2,13 @@
 
 Small collection of classes that we use across all projects
 
+## Install
+
+```
+npm i --save "angular-common-module" "ng2-toasty@4.0.3"
+```
+
+This also require `angular-bootstrap-ui`(https://github.com/llafuente/angular-bootstrap-ui)
 
 ## Base
 
