@@ -2,8 +2,7 @@ import { OnInit, OnDestroy, Injector } from "@angular/core";
 import { Subscription } from "rxjs/Rx" ;
 import { Observable } from "rxjs/Observable" ;
 import { ActivatedRoute, ActivatedRouteSnapshot, Router } from "@angular/router";
-import { ToastyService, ToastOptions, ToastData } from "ng2-toasty";
-import { BBConfirmService } from "angular-bootstrap-ui";
+import { BBAlertService, BBConfirmService, ToastyService, ToastOptions, ToastData } from "angular-bootstrap-ui";
 
 import { LogService } from "./services/Log.service";
 import { Logger } from "./services/Logger";
@@ -17,6 +16,7 @@ export class Base implements /*OnInit, */OnDestroy {
   router: Router;
   currentLog: Logger;
   confirmService: BBConfirmService;
+  alertService: BBAlertService;
 
   constructor(
     public injector: Injector,
@@ -26,6 +26,7 @@ export class Base implements /*OnInit, */OnDestroy {
     this.session = injector.get(SessionStorageService);
     this.router = injector.get(Router);
     this.confirmService = injector.get(BBConfirmService);
+    this.alertService = injector.get(BBAlertService);
 
     const logs: LogService = injector.get(LogService);
     this.currentLog = logs.to("Component"); // maybe instaceof this
@@ -173,4 +174,7 @@ export class Base implements /*OnInit, */OnDestroy {
     return this.confirmService.show(header, content);
   }
 
+  alert(header: string, content: string, isHTML: boolean): Observable<boolean> {
+    return this.alertService.show(header, content, isHTML);
+  }
 }

@@ -1,7 +1,7 @@
 {
   "name": "angular-common-module",
   "description": "Small collection of classes that we use across all projects",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": {
     "name": "Luis Lafuente Morales"
   },
@@ -12,7 +12,7 @@
   "peerDependencies": {
     "@angular/core": ">=5.0.0",
     "@angular/router": ">=5.0.0",
-    "angular-bootstrap-ui": ">=0.0.1",
+    "angular-bootstrap-ui": ">=1.1.0",
     "ng2-toasty": "4.0.3"
   },
   "scripts": {
