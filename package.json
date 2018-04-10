@@ -1,7 +1,7 @@
 {
   "name": "angular-common-module",
   "description": "Small collection of classes that we use across all projects",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": {
     "name": "Luis Lafuente Morales"
   },
